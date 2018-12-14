@@ -323,7 +323,8 @@ stages:
 
       # This script checks the IBM Container Service cluster is ready, has a namespace configured with access to the private
       # image registry (using an IBM Cloud API Key). It also configures Helm Tiller service to later perform a deploy with Helm.
-
+      #OCH
+      ibmcloud plugin update container-service -r Bluemix
       # Input env variables (can be received via a pipeline environment properties.file.
       echo "IMAGE_NAME=${IMAGE_NAME}"
       echo "IMAGE_TAG=${IMAGE_TAG}"
@@ -445,6 +446,8 @@ stages:
       #    source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/deploy_helm.sh")
       # ------------------
       # source: https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/deploy_helm.sh
+      #OCH
+      ibmcloud plugin update container-service -r Bluemix
       # Input env variables (can be received via a pipeline environment properties.file.
       echo "IMAGE_NAME=${IMAGE_NAME}"
       echo "IMAGE_TAG=${IMAGE_TAG}"
